@@ -19,7 +19,7 @@ export function buildMetadata(
       languages: {
         en,
         ar,
-        "x-default": en,
+        "x-default": ar,
       },
     },
     openGraph: {

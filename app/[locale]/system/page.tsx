@@ -11,7 +11,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale: raw } = await params;
-  const locale: Locale = isLocale(raw) ? raw : "en";
+  const locale: Locale = isLocale(raw) ? raw : "ar";
   const meta = copy[locale].meta.system;
   return buildMetadata(locale, { ...meta, path: "/system" });
 }
@@ -22,7 +22,7 @@ export default async function SystemPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale: raw } = await params;
-  const locale: Locale = isLocale(raw) ? raw : "en";
+  const locale: Locale = isLocale(raw) ? raw : "ar";
   const t = copy[locale].system;
 
   return (

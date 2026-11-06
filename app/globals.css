@@ -59,6 +59,8 @@ h3,
 
 html[lang="ar"] :is(h1, h2, h3, .font-display) {
   font-family: var(--font-alexandria), var(--font-manrope), sans-serif;
+  letter-spacing: 0;
+  line-height: 1.45;
 }
 
 .font-metric {

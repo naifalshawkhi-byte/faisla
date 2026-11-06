@@ -9,7 +9,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale: raw } = await params;
-  const locale: Locale = isLocale(raw) ? raw : "en";
+  const locale: Locale = isLocale(raw) ? raw : "ar";
   const meta = copy[locale].meta.leadership;
   return buildMetadata(locale, { ...meta, path: "/leadership" });
 }
@@ -20,7 +20,7 @@ export default async function LeadershipPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale: raw } = await params;
-  const locale: Locale = isLocale(raw) ? raw : "en";
+  const locale: Locale = isLocale(raw) ? raw : "ar";
   const t = copy[locale].leadership;
 
   return (

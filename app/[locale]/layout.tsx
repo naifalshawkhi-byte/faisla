@@ -34,7 +34,7 @@ const plex = IBM_Plex_Sans_Arabic({
 });
 
 export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "ar" }];
+  return [{ locale: "ar" }, { locale: "en" }];
 }
 
 export async function generateMetadata({
@@ -43,7 +43,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale: raw } = await params;
-  const locale: Locale = isLocale(raw) ? raw : "en";
+  const locale: Locale = isLocale(raw) ? raw : "ar";
   const description = copy[locale].meta.home.description;
 
   return {
@@ -67,7 +67,7 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale: raw } = await params;
-  const locale: Locale = isLocale(raw) ? raw : "en";
+  const locale: Locale = isLocale(raw) ? raw : "ar";
   const content = copy[locale];
 
   return (

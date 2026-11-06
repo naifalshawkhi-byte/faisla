@@ -10,7 +10,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale: raw } = await params;
-  const locale: Locale = isLocale(raw) ? raw : "en";
+  const locale: Locale = isLocale(raw) ? raw : "ar";
   const meta = copy[locale].meta.challenges;
   return buildMetadata(locale, { ...meta, path: "/challenges" });
 }
@@ -21,7 +21,7 @@ export default async function ChallengesPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale: raw } = await params;
-  const locale: Locale = isLocale(raw) ? raw : "en";
+  const locale: Locale = isLocale(raw) ? raw : "ar";
   const t = copy[locale].challenges;
 
   return (

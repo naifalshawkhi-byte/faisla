@@ -7,7 +7,7 @@ import { useParams } from "next/navigation";
 
 export default function NotFound() {
   const params = useParams<{ locale: string }>();
-  const locale = params?.locale && isLocale(params.locale) ? params.locale : "en";
+  const locale = params?.locale && isLocale(params.locale) ? params.locale : "ar";
   const t = copy[locale].notFound;
 
   return (

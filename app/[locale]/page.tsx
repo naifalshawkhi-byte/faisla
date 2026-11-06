@@ -14,7 +14,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale: raw } = await params;
-  const locale: Locale = isLocale(raw) ? raw : "en";
+  const locale: Locale = isLocale(raw) ? raw : "ar";
   const meta = copy[locale].meta.home;
   return buildMetadata(locale, {
     title: meta.title,
@@ -29,7 +29,7 @@ export default async function HomePage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale: raw } = await params;
-  const locale: Locale = isLocale(raw) ? raw : "en";
+  const locale: Locale = isLocale(raw) ? raw : "ar";
   const t = copy[locale];
 
   return (
@@ -43,7 +43,13 @@ export default async function HomePage({
           <div className="order-2 md:order-1 md:col-span-7">
             <Reveal>
               <p className="font-metric text-sm text-olive">LSAR* · 2026</p>
-              <h1 className="mt-4 max-w-4xl font-display text-[clamp(2.15rem,10vw,6.25rem)] leading-[0.98] text-charcoal">
+              <h1
+                className={
+                  locale === "ar"
+                    ? "mt-6 max-w-4xl font-display text-[clamp(2.6rem,6.6vw,5.75rem)] leading-[1.5] text-charcoal"
+                    : "mt-4 max-w-4xl font-display text-[clamp(2.15rem,10vw,6.25rem)] leading-[0.98] text-charcoal"
+                }
+              >
                 {t.hero.titleLead}
                 <span className="mt-1 block">{t.hero.titleRest}</span>
               </h1>
