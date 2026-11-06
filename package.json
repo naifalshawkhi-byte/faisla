@@ -2,13 +2,21 @@
   "name": "faisal",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
+  "overrides": {
+    "magic-string": "0.30.17"
+  },
   "dependencies": {
+    "lucide-react": "^1.69.0",
+    "motion": "^14.9.1",
     "next": "16.4.5",
     "react": "19.3.0",
     "react-dom": "19.3.0"
