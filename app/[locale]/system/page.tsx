@@ -37,7 +37,7 @@ export default async function SystemPage({
         <p className="text-lg leading-relaxed text-charcoal/75 lg:col-span-5">{t.phrase}</p>
       </header>
 
-      <div className="border-y border-charcoal/10 bg-paper">
+      <div className="mx-3 rounded-3xl border border-white/10 bg-paper md:mx-6">
         <div className="mx-auto w-full max-w-[1400px] px-6 py-16 md:px-10 md:py-20">
           <p className="max-w-3xl text-xl leading-relaxed text-charcoal/80">{t.lead}</p>
           <p className="mt-5 max-w-3xl leading-relaxed text-charcoal/70">{t.body}</p>
@@ -56,7 +56,7 @@ export default async function SystemPage({
             {t.continuationTitle}
           </h2>
           <p className="mt-6 leading-relaxed text-charcoal/75">{t.continuationLead}</p>
-          <div className="relative mt-10 hidden min-h-72 lg:block">
+          <div className="relative mt-10 hidden min-h-72 overflow-hidden rounded-3xl border border-white/10 lg:block">
             <Image
               src="/images/architecture-light.jpg"
               alt={

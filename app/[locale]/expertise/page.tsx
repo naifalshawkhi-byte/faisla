@@ -34,7 +34,7 @@ export default async function ExpertisePage({
       </header>
       <div className="mt-16 space-y-8">
         {t.areas.map((area) => (
-          <section key={area.id} className="border border-charcoal/10 bg-paper">
+          <section key={area.id} className="overflow-hidden rounded-3xl border border-white/10 bg-paper">
             <div className="grid gap-8 p-7 md:p-10 lg:grid-cols-12">
               <div className="lg:col-span-7">
                 <p className="font-metric text-sm tracking-[0.18em] text-olive">{area.id}</p>
@@ -55,7 +55,7 @@ export default async function ExpertisePage({
                   ))}
                 </ul>
               </div>
-              <div className="flex flex-col justify-end bg-stone p-6 lg:col-span-5">
+              <div className="flex flex-col justify-end rounded-2xl bg-stone p-6 lg:col-span-5">
                 <p className="text-[0.72rem] uppercase tracking-[0.16em] text-charcoal/55">
                   {t.outputLabel}
                 </p>

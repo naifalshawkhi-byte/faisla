@@ -274,7 +274,7 @@ export const copy = {
         },
         {
           initials: "FS",
-          name: "Dr. Faddy Sadideen",
+          name: "Dr. Fadi Saad Al-Din",
           role: "Experience & Engagement",
           text: "Giga-project communications and visitor experience leadership.",
         },
@@ -297,8 +297,8 @@ export const copy = {
           text: "Decision systems, KPI architecture, regulatory-compliant AI.",
         },
         {
-          initials: "AD",
-          name: "Abdulaziz Darwish",
+          initials: "NA",
+          name: "Naif Abdo",
           role: "Digital Execution & Cybersecurity",
           text: "Secure-by-design platforms and digital infrastructure.",
         },
@@ -602,7 +602,7 @@ export const copy = {
         },
         {
           initials: "FS",
-          name: "د. فادي صديدين",
+          name: "د. فادي سعد الدين",
           role: "التجربة والتفاعل",
           text: "تصميم التجربة للمشاريع الكبرى وإدارة التواصل المجتمعي.",
         },
@@ -625,8 +625,8 @@ export const copy = {
           text: "أنظمة القرار، وهندسة مؤشرات الأداء، والامتثال التنظيمي.",
         },
         {
-          initials: "AD",
-          name: "عبدالعزيز درويش",
+          initials: "NA",
+          name: "نايف عبده",
           role: "تطوير المنصات الرقمية",
           text: "منصات رقمية آمنة مصممة وفق مبدأ الأمان المصمم.",
         },

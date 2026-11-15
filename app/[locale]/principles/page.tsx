@@ -35,7 +35,10 @@ export default async function PrinciplesPage({
       </header>
       <div className="mt-16 grid gap-6 lg:grid-cols-2">
         {t.items.map((item) => (
-          <section key={item.id} className="flex min-h-80 flex-col bg-stone p-8 md:p-10">
+          <section
+            key={item.id}
+            className="flex min-h-80 flex-col rounded-3xl border border-white/10 bg-stone p-8 md:p-10"
+          >
             <div className="flex items-start justify-between gap-6">
               <h2 className="font-display text-3xl leading-tight">{item.title}</h2>
               <p className="font-metric text-sm tracking-[0.16em] text-olive">{item.id}</p>

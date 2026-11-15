@@ -34,15 +34,14 @@ export default async function HomePage({
 
   return (
     <>
-      <section className="overflow-hidden border-b border-white/10">
-        <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-6 px-4 pb-14 pt-24 md:grid md:min-h-[100svh] md:grid-cols-12 md:items-center md:gap-8 md:px-10 md:pb-16 md:pt-28">
-          <div className="relative order-1 flex items-center justify-center md:order-2 md:col-span-5">
-            <div className="pointer-events-none absolute size-48 rounded-full bg-[#3d2ef0]/40 blur-3xl md:size-72" />
-            <Mark className="relative w-36 sm:w-52 md:w-full md:max-w-[440px]" />
-          </div>
-          <div className="order-2 md:order-1 md:col-span-7">
+      <section className="px-3 pb-6 pt-28 md:px-6 md:pb-10 md:pt-32">
+        <div className="relative mx-auto grid w-full max-w-[1440px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#0c0e16]/75 shadow-[0_30px_80px_rgba(0,0,0,0.35)] md:min-h-[calc(100svh-8rem)] md:grid-cols-12">
+          <div className="pointer-events-none absolute -end-16 -top-20 size-72 rounded-full bg-[#3d2ef0]/40 blur-3xl md:size-96" />
+          <div className="relative order-2 flex flex-col justify-center px-5 py-10 sm:px-8 md:order-1 md:col-span-7 md:px-12 md:py-16">
             <Reveal>
-              <p className="font-metric text-sm text-olive">LSAR* · 2026</p>
+              <p className="inline-flex w-fit rounded-full border border-white/10 bg-white/5 px-3 py-1 font-metric text-sm text-olive">
+                LSAR* · 2026
+              </p>
               <h1
                 className={
                   locale === "ar"
@@ -62,18 +61,25 @@ export default async function HomePage({
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link
                   href={hrefFor(locale, "/system")}
-                  className="inline-flex min-h-12 w-full items-center justify-center bg-charcoal px-6 text-sm text-ivory transition-colors hover:bg-olive hover:text-white sm:w-auto"
+                  className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-charcoal px-6 text-sm text-ivory transition-colors hover:bg-olive hover:text-white sm:w-auto"
                 >
                   {t.hero.primary}
                 </Link>
                 <Link
                   href={hrefFor(locale, "/contact")}
-                  className="inline-flex min-h-12 w-full items-center justify-center border border-charcoal/15 px-6 text-sm text-charcoal transition-colors hover:border-olive hover:text-olive sm:w-auto"
+                  className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-white/15 px-6 text-sm text-charcoal transition-colors hover:border-olive hover:text-olive sm:w-auto"
                 >
                   {t.hero.secondary}
                 </Link>
               </div>
             </Reveal>
+          </div>
+          <div className="relative order-1 flex items-center justify-center px-6 pt-8 md:order-2 md:col-span-5 md:px-10 md:pt-0">
+            <div className="relative flex aspect-square w-52 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] sm:w-72 md:w-full md:max-w-[440px]">
+              <div className="pointer-events-none absolute inset-6 rounded-full border border-[#5b4dff]/45" />
+              <div className="pointer-events-none absolute inset-12 rounded-full bg-[#3d2ef0]/20 blur-2xl" />
+              <Mark className="relative w-32 sm:w-44 md:w-[68%]" />
+            </div>
           </div>
         </div>
       </section>
@@ -110,9 +116,13 @@ export default async function HomePage({
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-charcoal/75">{t.challenges.lead}</p>
           </Reveal>
-          <div className="mt-14 grid gap-px bg-charcoal/10 sm:grid-cols-2">
+          <div className="mt-14 grid gap-4 sm:grid-cols-2">
             {t.challenges.items.map((item, index) => (
-              <Reveal key={item.id} delay={index * 0.05} className="bg-paper p-7 md:p-9">
+              <Reveal
+                key={item.id}
+                delay={index * 0.05}
+                className="rounded-3xl border border-white/10 bg-paper p-7 md:p-9"
+              >
                 <p className="font-metric text-sm tracking-[0.16em] text-olive">{item.id}</p>
                 <p className="mt-5 text-[0.72rem] uppercase tracking-[0.16em] text-charcoal/55">
                   {item.stage}
@@ -162,11 +172,11 @@ export default async function HomePage({
               {t.expertise.title}
             </h2>
           </Reveal>
-          <div className="mt-12 divide-y divide-charcoal/10 border-y border-charcoal/10">
+          <div className="mt-12 grid gap-3">
             {t.expertise.areas.map((area) => (
               <div
                 key={area.id}
-                className="grid gap-4 py-7 md:grid-cols-12 md:items-baseline"
+                className="grid gap-4 rounded-3xl border border-white/10 bg-paper/70 px-6 py-7 md:grid-cols-12 md:items-baseline"
               >
                 <p className="font-metric text-sm tracking-[0.16em] text-olive md:col-span-1">
                   {area.id}
@@ -207,8 +217,14 @@ export default async function HomePage({
           </Reveal>
           <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {t.leadership.people.map((person) => (
-              <li key={person.name} className="bg-paper p-6 shadow-[0_18px_40px_rgba(0,0,0,0.28)]">
-                <p dir="ltr" className="font-metric text-sm font-semibold tracking-[0.14em] text-olive">
+              <li
+                key={person.name}
+                className="rounded-3xl border border-white/10 bg-paper p-6 shadow-[0_18px_40px_rgba(0,0,0,0.28)]"
+              >
+                <p
+                  dir="ltr"
+                  className="flex size-12 items-center justify-center rounded-full border border-[#5b4dff]/40 bg-[#3d2ef0]/10 font-metric text-sm font-semibold tracking-[0.14em] text-olive"
+                >
                   {person.initials}
                 </p>
                 <h3 className="mt-6 font-display text-2xl">{person.name}</h3>
@@ -219,8 +235,8 @@ export default async function HomePage({
         </div>
       </section>
 
-      <section className="border-t border-white/10 bg-[#05060a] text-[#f4f5f8]">
-        <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-10 px-4 py-16 sm:px-6 md:flex-row md:px-10 md:py-24 md:items-end md:justify-between md:px-10 lg:py-28">
+      <section className="px-3 pb-4 text-[#f4f5f8] md:px-6">
+        <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-10 rounded-[1.75rem] border border-white/10 bg-[#05060a] px-5 py-14 sm:px-8 md:flex-row md:items-end md:justify-between md:px-12 md:py-20">
           <div className="max-w-2xl">
             <p className="font-metric text-sm text-olive">2026</p>
             <h2 className="mt-4 font-display text-[clamp(2.4rem,4.4vw,4rem)] leading-[0.98]">
@@ -232,7 +248,7 @@ export default async function HomePage({
             <Mark className="w-24 sm:w-28" />
             <Link
               href={hrefFor(locale, "/contact")}
-              className="inline-flex min-h-12 w-full items-center justify-center border border-white/25 px-6 text-sm text-white transition-colors hover:border-olive hover:text-white sm:w-auto"
+              className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-white/25 px-6 text-sm text-white transition-colors hover:border-olive hover:text-white sm:w-auto"
             >
               {t.closing.action}
             </Link>

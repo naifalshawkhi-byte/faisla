@@ -45,7 +45,7 @@ export default async function AboutPage({
             {t.hero.description}
           </p>
         </div>
-        <div className="relative min-h-[420px] lg:col-span-5">
+        <div className="relative min-h-[420px] overflow-hidden rounded-3xl border border-white/10 lg:col-span-5">
           <Image
             src="/images/architecture-stone.jpg"
             alt={

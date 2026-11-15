@@ -22,13 +22,23 @@ html {
 }
 
 body {
-  background: #07080d;
+  background:
+    radial-gradient(920px 520px at 88% -8%, rgba(61, 46, 240, 0.32), transparent 62%),
+    radial-gradient(680px 420px at -8% 18%, rgba(42, 34, 196, 0.22), transparent 58%),
+    #07080d;
   color: #f4f5f8;
   overflow-x: clip;
   font-family: var(--font-inter), var(--font-plex), sans-serif;
   font-size: 1.0625rem;
   line-height: 1.75;
   text-rendering: optimizeLegibility;
+}
+
+html[dir="rtl"] body {
+  background:
+    radial-gradient(920px 520px at 12% -8%, rgba(61, 46, 240, 0.32), transparent 62%),
+    radial-gradient(680px 420px at 108% 18%, rgba(42, 34, 196, 0.22), transparent 58%),
+    #07080d;
 }
 
 html[lang="ar"] body {

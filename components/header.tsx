@@ -51,12 +51,12 @@ export function Header({ locale, labels }: HeaderProps) {
   const solid = scrolled || open;
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${
-        solid ? "border-b border-charcoal/10 bg-ivory" : "bg-transparent"
-      }`}
-    >
-      <div className="mx-auto flex h-16 w-full max-w-[1400px] items-center justify-between px-4 sm:px-6 md:h-20 md:px-10">
+    <header className="fixed inset-x-0 top-0 z-40 px-3 pt-3 md:px-6 md:pt-4">
+      <div
+        className={`mx-auto flex h-16 w-full max-w-[1400px] items-center justify-between rounded-full border border-white/10 px-4 shadow-[0_16px_50px_rgba(0,0,0,0.35)] backdrop-blur-xl transition-colors duration-300 sm:px-5 md:h-[4.25rem] md:px-6 ${
+          solid ? "bg-[#0b0d14]/90" : "bg-[#0b0d14]/60"
+        }`}
+      >
         <Logo locale={locale} />
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Main">
           {navPaths.map((item) => {
@@ -101,7 +101,7 @@ export function Header({ locale, labels }: HeaderProps) {
           </div>
           <Link
             href={hrefFor(locale, "/contact")}
-            className="hidden min-h-10 items-center bg-charcoal px-4 text-[0.82rem] text-ivory transition-colors hover:bg-olive hover:text-white sm:inline-flex"
+            className="hidden min-h-10 items-center rounded-full bg-charcoal px-5 text-[0.82rem] text-ivory transition-colors hover:bg-olive hover:text-white sm:inline-flex"
           >
             {labels.contactCta}
           </Link>
@@ -120,7 +120,7 @@ export function Header({ locale, labels }: HeaderProps) {
       {open ? (
         <nav
           id="mobile-nav"
-          className="fixed inset-x-0 bottom-0 top-16 z-30 overflow-y-auto bg-ivory px-5 py-6 md:top-20 lg:hidden"
+          className="fixed inset-x-3 bottom-3 top-[5.4rem] z-30 overflow-y-auto rounded-3xl border border-white/10 bg-[#0b0d14]/95 px-5 py-6 backdrop-blur-xl md:top-[6rem] lg:hidden"
         >
           <ul className="flex flex-col">
             {navPaths.map((item) => (
@@ -136,7 +136,7 @@ export function Header({ locale, labels }: HeaderProps) {
           </ul>
           <Link
             href={hrefFor(locale, "/contact")}
-            className="mt-6 flex min-h-12 items-center justify-center bg-charcoal text-sm text-ivory"
+            className="mt-6 flex min-h-12 items-center justify-center rounded-full bg-charcoal text-sm text-ivory"
           >
             {labels.contactCta}
           </Link>

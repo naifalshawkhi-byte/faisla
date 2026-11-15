@@ -36,7 +36,7 @@ export function Footer({ locale, labels, footer, address }: FooterProps) {
   const names = { ...labels, ...footer };
 
   return (
-    <footer className="border-t border-charcoal/10 bg-ivory">
+    <footer className="mt-6 border-t border-white/10 bg-[#090b12]">
       <div className="mx-auto grid w-full max-w-[1400px] gap-10 px-4 py-14 sm:px-6 md:px-10 md:py-16 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <Logo locale={locale} />

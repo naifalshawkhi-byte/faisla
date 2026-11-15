@@ -54,7 +54,7 @@ export default async function ChallengesPage({
         ))}
       </ol>
 
-      <aside className="mt-16 grid gap-8 bg-stone p-8 md:grid-cols-12 md:p-12">
+      <aside className="mt-16 grid gap-8 rounded-3xl border border-white/10 bg-stone p-8 md:grid-cols-12 md:p-12">
         <div className="md:col-span-7">
           <h2 className="font-display text-3xl">{t.outcomeTitle}</h2>
           <p className="mt-4 max-w-xl leading-relaxed text-charcoal/75">{t.outcomeText}</p>

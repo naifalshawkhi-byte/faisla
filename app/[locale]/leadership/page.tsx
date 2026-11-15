@@ -34,10 +34,10 @@ export default async function LeadershipPage({
       </header>
       <ul className="mt-16 grid gap-5 md:grid-cols-2">
         {t.people.map((person) => (
-          <li key={person.name} className="border border-charcoal/10 bg-paper p-7 md:p-9">
+          <li key={person.name} className="rounded-3xl border border-white/10 bg-paper p-7 md:p-9">
             <div
               dir="ltr"
-              className="flex size-14 items-center justify-center bg-stone font-metric text-sm font-semibold tracking-[0.14em] text-olive"
+              className="flex size-14 items-center justify-center rounded-full border border-[#5b4dff]/40 bg-[#3d2ef0]/10 font-metric text-sm font-semibold tracking-[0.14em] text-olive"
               aria-hidden
             >
               {person.initials}

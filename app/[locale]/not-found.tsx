@@ -17,7 +17,7 @@ export default function NotFound() {
       <p className="mt-5 text-charcoal/70">{t.text}</p>
       <Link
         href={hrefFor(locale)}
-        className="mt-8 inline-flex min-h-12 w-fit items-center bg-charcoal px-6 text-sm text-ivory"
+        className="mt-8 inline-flex min-h-12 w-fit items-center rounded-full bg-charcoal px-6 text-sm text-ivory"
       >
         {t.action}
       </Link>

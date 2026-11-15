@@ -32,10 +32,14 @@ export function ContactForm({ labels }: ContactFormProps) {
   }
 
   const field =
-    "mt-2 w-full border border-charcoal/15 bg-paper px-3 py-3 text-base text-charcoal outline-none transition-colors focus:border-olive";
+    "mt-2 w-full rounded-2xl border border-white/10 bg-[#0c0e16] px-4 py-3 text-base text-charcoal outline-none transition-colors focus:border-olive";
 
   return (
-    <form onSubmit={onSubmit} className="bg-stone px-6 py-8 sm:px-8" noValidate={false}>
+    <form
+      onSubmit={onSubmit}
+      className="rounded-[1.75rem] border border-white/10 bg-stone px-6 py-8 shadow-[0_24px_60px_rgba(0,0,0,0.28)] sm:px-8"
+      noValidate={false}
+    >
       <h2 className="font-display text-3xl text-charcoal">{labels.formTitle}</h2>
       <p className="mt-3 text-sm leading-relaxed text-charcoal/70">{labels.formNote}</p>
       <div className="mt-8 grid gap-5">
@@ -60,7 +64,7 @@ export function ContactForm({ labels }: ContactFormProps) {
         </label>
         <button
           type="submit"
-          className="inline-flex min-h-12 w-full items-center justify-center bg-charcoal px-6 text-sm text-ivory transition-colors hover:bg-olive hover:text-white sm:w-auto"
+          className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-charcoal px-6 text-sm text-ivory transition-colors hover:bg-olive hover:text-white sm:w-auto"
         >
           {labels.submit}
         </button>
